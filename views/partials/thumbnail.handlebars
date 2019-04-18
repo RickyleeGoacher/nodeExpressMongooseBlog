@@ -1,0 +1,14 @@
+{{# each contents }}
+    <div class="thumbnail">
+        <div class="thumb-image">
+            <img src="{{ image }}" />
+        </div>
+        <div class="thumb-text">
+            <h3>{{ this.title }}</h3>
+            <span>{{ this.created }}</span>
+            <br>
+            <p> {{ this.description }} </p>
+            <a href="/post/blogPost/{{this.url}}">Read more</a>
+        </div>
+    </div>
+{{/each}}

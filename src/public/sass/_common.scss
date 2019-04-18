@@ -1,0 +1,25 @@
+/*mixins*/
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin box-shadow {
+	-webkit-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.49);
+    -moz-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.49);
+    box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.49);
+}
+
+$main-font: 'IBM Plex Sans', sans-serif;
+
+$primaryColour: linear-gradient(to right bottom, #b30931, #ac0b48, #a01b5c, #902a6b, #7c3676);
+
+/*end mixins*/

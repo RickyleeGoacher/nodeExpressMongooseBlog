@@ -1,0 +1,16 @@
+{{# each contents }}
+    <div class="thumbnail">
+        <div class="thumb-image">
+            <img src="{{ image }}" />
+        </div>
+        <div class="thumb-text">
+            <h3><a href="/post/blogPost/{{this.url}}">{{ this.title }}</a></h3>
+            <span>{{ this.created }}</span>
+            <br>
+            <p> {{ this.description }}... </p>        
+            <a href="/post/edit/{{this._id}}"><i class="far fa-edit"></i></a>
+            <a href="/post/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record?');"><i class="fas fa-trash-alt"></i></a>
+            <a href="/post/blogPost/{{this.url}}">Read more</a>
+        </div>
+    </div>
+{{/each}}

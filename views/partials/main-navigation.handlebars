@@ -1,0 +1,22 @@
+<nav>
+	<div class="logo">
+		<h2><a href="/"><i class="fas fa-at"></i></a></h2>
+		<div id="icon">
+			<i id="nav-icon"class="fas fa-bars"></i>
+		</div>
+	</div>
+	<ul id="links">
+		<li><a href="post/blogPost">Blog posts</a></li>
+		{{#if isAuthenticated }}
+			<li><a href="post/create">Create</a></li>
+			<li><a href="/dashboard">Dashboard</a></li>
+			{{#if user}}
+				<li id="user">{{user.username}} |</li>
+			{{/if}}
+			<li><a href="users/logout">Logout</a></li>
+		{{else}}
+		<li><a href="users/login">Login</a></li>
+		<li><a href="users/register">Register</a></li>
+		{{/if}}
+	</ul>
+</nav>

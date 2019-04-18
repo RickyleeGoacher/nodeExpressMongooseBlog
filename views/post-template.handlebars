@@ -1,0 +1,25 @@
+{{> head }}
+<body>
+{{> header }}
+    <div id="container">
+        <div class="blog-post">
+            <div class="header-image-container">
+                <div class="header-image">
+                    <img src="{{contents.image}}" />
+                </div>
+                <div class="header-text">
+                    <h1>{{ contents.title }}</h1>
+                </div>
+                <div id="overlay"></div>
+            </div>
+            <div class="content-container">
+                <span>Created: {{ contents.created }}</span><br />
+                <span>Author: {{ contents.author }}</span>
+                <br>
+                {{{ contents.content }}}
+            </div>
+        </div>
+    </div>
+{{> footer }}
+</body>
+</html>

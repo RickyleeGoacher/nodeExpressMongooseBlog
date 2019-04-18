@@ -1,0 +1,20 @@
+{{> head }}
+<body>
+{{> header }}
+
+<form id="blog-post-editor" action="/users" method="POST" enctype="multipart/form-data">
+
+          <div class="input-container">
+              <textarea id="description" class="form-control" name="description" type="text" placeholder="Enter Description" minlength="0" maxlength="150">{{content.description}}</textarea>
+          </div>
+        
+          <div class="input-container">
+              <input id="image" class="form-control" name="image" type="file" >
+          </div>
+
+          <div class="input-container">
+              <button type="submit">Save Post</button>
+            </div>
+        </form>
+</body>
+{{> footer }}

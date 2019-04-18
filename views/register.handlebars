@@ -1,0 +1,35 @@
+{{> head }}
+<body>
+{{> header }}
+
+            <div id="form-container">
+                {{#if errors}}
+                    {{#each errors}}
+                        <div class="alert alert-danger">{{msg}}</div>
+                    {{/each}}
+                {{/if}}
+            <form id="login-form" action="/users/register" method="POST">
+                <div class="input-container">
+                    <label>Email:</label>
+                    <input type="text" name="email" placeholder="Enter email..." value="{{email}}"/>
+                </div>
+                <div class="input-container">
+                    <label>Username:</label>
+                    <input type="text" name="username" placeholder="Enter username..." value="{{username}}"/>
+                </div>
+                <div class="input-container">
+                    <label>Password:</label>
+                    <input type="password" name="password" placeholder="Enter password..."/>
+                </div>
+                <div class="input-container">
+                    <label>Confirm password:</label>
+                    <input type="password" name="password2" placeholder="Confirm password..."/>
+                </div>
+                <div class="input-container">
+                    <input type="submit" value="Register"/>
+                </div>
+            </form>
+        </div>
+
+{{> footer }}
+</body>

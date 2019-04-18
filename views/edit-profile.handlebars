@@ -1,0 +1,28 @@
+{{> head }}
+<body>
+{{> header }}
+
+<form id="blog-post-editor" action="/users/update-profile" method="POST" enctype="multipart/form-data">
+<input id="id" class="form-control" name="_id" type="text" hidden="true" value="{{ user._id }}
+          <input id="id" class="form-control" name="password" type="text" hidden="true" value="{{ user.password }}
+">
+<input id="id" class="form-control" name="username" type="text" hidden="true" value="{{ user.username }}
+">
+
+<input id="id" class="form-control" name="email" type="text" hidden="true" value="{{ user.email }}
+">
+
+          <div class="input-container">
+              <textarea id="description" class="form-control" name="description" type="text" placeholder="Enter Description" minlength="0" maxlength="150"></textarea>
+          </div>
+        
+          <div class="input-container">
+              <input id="image" class="form-control" name="image" type="file" >
+          </div>
+
+          <div class="input-container">
+              <button type="submit">Save Post</button>
+            </div>
+        </form>
+</body>
+{{> footer }}

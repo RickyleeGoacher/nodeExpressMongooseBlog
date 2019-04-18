@@ -1,0 +1,60 @@
+{{> head }}
+<body>
+{{> header }}
+<div id="container">
+
+   
+            <div class="alert alert-danger">{{msg}}</div>
+  
+
+    <form id="blog-post-editor" action="/post" method="POST" enctype="multipart/form-data">
+
+          <input id="id" class="form-control" name="_id" type="text" hidden="true" value="{{ contents._id }}
+">
+          <div class="input-container">
+              <input id="url" class="form-control" name="url" type="text" hidden="true">
+            </div>
+
+          <div class="input-container">
+              <input id="title" class="form-control" name="title" type="text" placeholder="Enter Title" value="{{content.title}}">
+          </div>
+
+          <div class="input-container">
+              <textarea id="description" class="form-control" name="description" type="text" placeholder="Enter Description" minlength="0" maxlength="150">{{content.description}}</textarea>
+          </div>
+        
+          <div class="input-container">
+              <input id="image" class="form-control" name="image" type="file" >
+          </div>
+
+          <div class="row form-group">
+              <label for="about">Content</label>
+              <input name="content" type="hidden">
+              <div id="editor-container">
+                  <p>{{{content.content}}}</p>
+              </div>
+          </div>
+
+          <div class="input-container">
+              <button type="submit">Save Post</button>
+            </div>
+        </form>
+
+</div>
+<script>
+window.onload = function() {
+    var src = document.getElementById("title"),
+        dst = document.getElementById("url");
+    src.addEventListener('input', function() {
+        dst.value = src.value.replace(/ +/g, '-').toLowerCase();
+    });
+};
+</script>  
+
+ 
+{{> footer }}
+<script type="text/javascript" src="js/quillEditor.js"></script>
+</body>
+</html>
+
+
